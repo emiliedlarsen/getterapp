@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Getter</title>
+<link rel="stylesheet" type="text/css" href="simple-grid.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui.theme.min.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui.structure.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+
+<body>
+
+<!--  HEADER  -->
+<header>
+	<nav class="row">
+	<div class="col-2-sm"><div pageDirect="frontpage" icon="getter-logo.png" class="getter-logo"></div></div>
+	<div class="col-3-sm"><h1>Getter</h1></div>
+	<div class="col-7-sm flx-justify">
+		<a pageDirect="profile">Profil</a>
+		<a pageDirect="postlist">Opslag</a>
+		<a pageDirect="new-post">Nyt opslag</a>
+		</div>
+	</nav>
+	</header>
+	
+<!--  FORSIDE  -->	
+<div id="frontpage" class="container page">
+
+	<div class="flx-justify flx-grid">
+		<div pageDirect="receiver" class="label front-label">
+			<p>Modtager</p>
+			<div icon="getter-logo.png" class="front-label-icon"></div>
+			<p>Jeg mangler...</p>
+			<div class="overlay">
+				<h3>Dig der mangler nogen eller noget...</h3>
+				<p>blablablabla</p></div>
+		</div>
+		<div pageDirect="getter" class="label front-label">
+			<p>Getter</p>
+			<div icon="getter-logo.png" class="front-label-icon"></div>
+			<p>Jeg kan hjælpe...</p>
+			<div class="overlay">
+				<h3>Dig der mangler nogen eller noget...</h3>
+				<p>blablablabla</p></div>
+		</div>
+	</div>
+	
+	</div>
+	
+<!--  GETTER SIDE  -->
+<div id="getter" class="container page">
+	---Getterpage---<br>
+	<a pageDirect="frontpage">To frontpage</a></div>
+
+	
+<!--  MODTAGER SIDE  -->
+<div id="receiver" class="container page">
+	<h2>Vælg en kategori</h2>
+	<div class="flx-grid">
+		
+		<div class="grid-labels label" pageDirect="newpost">
+		<div icon="getter-logo.png"></div>
+		<p>Label</p></div>
+		
+		<div class="grid-labels label" pageDirect="newpost">
+		<div icon="getter-logo.png"></div>
+		<p>Label</p></div>
+
+		<div class="grid-labels label" pageDirect="newpost">
+		<div icon="getter-logo.png"></div>
+		<p>Label</p></div>
+
+		<div class="grid-labels label" pageDirect="newpost">
+		<div icon="getter-logo.png"></div>
+		<p>Label</p></div>
+
+		<div class="grid-labels label" pageDirect="newpost">
+		<div icon="getter-logo.png"></div>
+		<p>Label</p></div>
+
+		<div class="grid-labels label" pageDirect="newpost">
+		<div icon="getter-logo.png"></div>
+		<p>Label</p></div>
+
+	
+	</div>
+	</div>
+	
+<!--  PROFIL SIDE  -->
+<div id="profile" class="container page">
+<h1>Profil</h1>
+<div id="profile-tabs">
+	<ul>
+	<li><a href="#profile-posts">posts tab</a></li>
+	<li><a href="#profile-settings">settings tab</a></li>
+	</ul>
+	<div id="profile-posts">
+	<h2>Mine Opslag</h2>
+	<h2>Mine Bud</h2>
+	</div>
+	<div id="profile-settings">
+	<div class="row">
+		<div class="col-2-sm"><p>Navn:</p></div>
+		<input class="col-10-sm" placeholder="Fornavn/Efternavn...">
+	
+		</div>
+		<div class="row">
+		<div class="col-2-sm"><p>Beskrivelse:</p></div>
+		<input class="col-7-sm" placeholder="Beskriv hvem du er og hvad du kan...">
+		<div class="col-2-sm"><p>Billede</p></div>
+		</div>
+		<div class="row">
+		<div class="col-2-sm"><p>Mail:</p></div>
+		<input class="col-10-sm" placeholder="adresse@mail.com">
+		</div>
+		<div class="row">
+		<div class="col-2-sm"><p>Telefon:</p></div>
+		<input class="col-10-sm" placeholder="+45 XXXXXXXX">
+		</div>
+	</div>
+
+
+	
+
+	</div>	
+</div>
+	
+<!--  NYT OPSLAG  -->
+	<div id="newpost" class="container page">
+	<h2>Nyt Opslag</h2>
+	<div class="row">
+		<div class="col-2-sm"><p>Titel:</p></div>
+		<input class="col-10-sm" placeholder="Kort overskrift...">
+	
+		</div>
+		<div class="row">
+		<div class="col-2-sm"><p>Beskrivelse:</p></div>
+		<input class="col-7-sm" placeholder="Beskrivelse af hvad du gerne vil have leveret eller lavet...">
+		<div class="col-2-sm"><p>Billede</p></div>
+		</div>
+		<div class="row">
+		<div class="col-2-sm"><p>Tidspunkt:</p></div>
+		<label class="col-3-sm" for="check-time">hurtigst mulig
+			<input type="checkbox" name="check-time" id="check-time" ></label>
+		<label class="col-3-sm" for="new-time">
+			<input type="spinner" id="new-time" ></label>
+		</div>
+		<div class="row">
+		<div class="col-2-sm"><p>Adresse:</p></div>
+		<input class="col-10-sm" placeholder="vejnavn, postnummer, osv.">
+		</div>
+		<div class="row flx-justify">
+		<div class="col-4"><button class="redbutton" pageDirect="postlist">Slå op</button></div>
+		</div>
+	</div>
+
+<!--  NYT OPSLAG  -->
+	<div id="postlist" class="container page">
+	<h2>Opslag</h2>
+	<div class="row post-desc">
+		<div class="col-2-sm">Overskrift</div>
+		<div class="col-3-sm">Kategori</div>
+		<div class="col-3-sm">Beskrivelse</div>
+        <div class="col-2-sm">Klokkeslet</div>
+		<div class="col-2-sm">Oprettet</div>
+		</div>
+	</div>
+	
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+	
+</html>
