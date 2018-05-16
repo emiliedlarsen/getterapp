@@ -92,16 +92,16 @@
 <!--  PROFIL SIDE  -->
 <div id="profile" class="container page">
 <h1>Profil</h1>
-<div id="profile-tabs">
+<div id="profile-tabs"><!--  jquery ui tabs  -->	
 	<ul>
 	<li><a href="#profile-posts">posts tab</a></li>
 	<li><a href="#profile-settings">settings tab</a></li>
 	</ul>
-	<div id="profile-posts">
+	<div id="profile-posts"><!--  tab 1  -->	
 	<h2>Mine Opslag</h2>
 	<h2>Mine Bud</h2>
 	</div>
-	<div id="profile-settings">
+	<div id="profile-settings"><!--  tab 2  -->	
 	<div class="row">
 		<div class="col-2-sm"><p>Navn:</p></div>
 		<input class="col-10-sm" placeholder="Fornavn/Efternavn...">
@@ -158,9 +158,11 @@
 	</div>
 
 <!--  NYT OPSLAG  -->
+<!--  opslag bliver genereet med jquery funkiton: createListEl(t,c,d,ti)
+se script.js for mere-->	
 	<div id="postlist" class="container page">
 	<h2>Opslag</h2>
-	<div class="row post-desc">
+	<div class="row post-desc"><!--  post liste labels  -->	
 		<div class="col-2-sm">Overskrift</div>
 		<div class="col-3-sm">Kategori</div>
 		<div class="col-3-sm">Beskrivelse</div>
