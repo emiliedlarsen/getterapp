@@ -56,8 +56,7 @@ var overlay = $(this).find(".overlay"); // .overlay klasse i .label gemmes
   } else { 
     $( overlay ).hide(); // ellers skjul
   }}).mouseleave(function() {
-var overlay = $(this).find(".overlay"); // .overlay klasse i .label gemmes
-    $( overlay ).hide(); // fikser at overlay bliver nede når der skiftes side da siden også skjules.
+    $(this).find(".overlay").hide(); // fikser at overlay bliver nede når der skiftes side da siden også skjules.
 });
 
 });
