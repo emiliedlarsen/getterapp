@@ -17,7 +17,7 @@ $( document ).ready(function() {
 	
 // post generator
 // t: overskrift c: kategori d: beskrivelse ti: tid
- function createListEl(t,c,d,ti) {$( "#postlist" ).append("<div class='row new-post-row'><div class='col-2-sm'>"+t+"</div><div class='col-3-sm'>"+c+"</div><div class='col-3-sm'>"+d+"</div><div class='col-2-sm'>"+ti+"</div><div class='col-2-sm'>"+"xx"+"</div></div></div>")};	
+ function createListEl(t,c,d,ti) {$( "#postlist" ).append("<div class='row new-post-row'><div class='col-2-sm'>"+t+"</div><div class='col-3-sm'>"+c+"</div><div class='col-3-sm'>"+d+"</div><div class='col-2-sm'>"+ti+"</div><div class='col-2-sm'>"+"xx"+"</div></div></div>");}	
 
 createListEl("Tømrer","handyman","blablabla","12:00");
 createListEl("Røvin","Mad og drikke",". . .","21:00");
@@ -50,13 +50,15 @@ $("[icon]").each(function() {
 
 $( ".label" ).hover( //hover over label
   function() {
-	 
-var overlay = $(this).find(".overlay"); // .overlay klasse i .label gemes
+var overlay = $(this).find(".overlay"); // .overlay klasse i .label gemmes
 	   if ( $( overlay ).is( ":hidden" ) ) { // hvis overlay er skjult?
     $( overlay ).slideDown( "slow" ); // slide down overlay
   } else { 
     $( overlay ).hide(); // ellers skjul
-  }});
+  }}).mouseleave(function() {
+var overlay = $(this).find(".overlay"); // .overlay klasse i .label gemmes
+    $( overlay ).hide(); // fikser at overlay bliver nede når der skiftes side da siden også skjules.
+});
 
 });
 
