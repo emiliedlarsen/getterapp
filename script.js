@@ -16,11 +16,11 @@ $( document ).ready(function() {
 	});
 	
 // post generator
-// t: overskrift c: kategori d: beskrivelse ti: tid
- function createListEl(t,c,d,ti) {$( "#postlist" ).append("<div class='row new-post-row'><div class='col-2-sm'>"+t+"</div><div class='col-3-sm'>"+c+"</div><div class='col-3-sm'>"+d+"</div><div class='col-2-sm'>"+ti+"</div><div class='col-2-sm'>"+"xx"+"</div></div></div>");}	
+// t: overskrift c: kategori a: adresse ti: tid
+ function createListEl(t,c,a,ti,date) {$( "#postlist .post-desc, #profile-posts .post-desc" ).after("<div class='row new-post-row'><div class='col-2-sm'>"+t+"</div><div class='col-3-sm'>"+c+"</div><div class='col-3-sm'>"+a+"</div><div class='col-2-sm'>"+ti+"</div><div class='col-2-sm'>"+date+"</div></div></div>");}	
 
-createListEl("Tømrer","handyman","blablabla","12:00");
-createListEl("Røvin","Mad og drikke",". . .","21:00");
+createListEl("Tømrer","handyman","gadenavn 24","12:00","29/4");
+createListEl("Røvin","Mad og drikke","vejnavn 48","21:00","17/5");
 
 	
 $("[pageDirect]").css("cursor","pointer"); //links får en 
@@ -46,6 +46,7 @@ $("[icon]").each(function() {
         newTime.spinner( "disable" );
       }
     });
+	$("#form-category").selectmenu();
 	
 
 $( ".label" ).hover( //hover over label
@@ -58,6 +59,19 @@ var overlay = $(this).find(".overlay"); // .overlay klasse i .label gemmes
   }}).mouseleave(function() {
     $(this).find(".overlay").hide(); // fikser at overlay bliver nede når der skiftes side da siden også skjules.
 });
+	
+// slå opslag op
+	function submitPost(){
+		var t = $('#form-title').val();
+		var c = $('#form-category').val();
+		var a = $('#form-adress').val();
+		var ti = $('#new-time').val();
+		var date = new Date(); // ny dato
+		var h   = date.getDate(); // få dato
+  		var m = date.getMonth(); // måned
+		createListEl(t,c,a,ti,h+"/"+m); // der sinsættes en psot med createListEL()
+	}
+ 	$("#submitnewpost").click(function() {submitPost();}); // submit post fyres afsted når der trykkes på knappen
 
 });
 

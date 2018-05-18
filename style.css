@@ -1,24 +1,25 @@
-*{
+* {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	outline: none;
 }
-p{
-	color:#333447;
+
+p {
+	color: #333447;
 }
-.icon{
+.icon {
 	background-size: contain;
 	height: 72px;
 	width: 72px;
 	margin-left: auto;
 	margin-right: auto;
 }
-.getter-logo{
+.getter-logo {
 	height: 120px;
 	width: 120px;
 }
-.page{
+.page {
 	margin-top: 28px;
 }
 header {
@@ -26,54 +27,58 @@ header {
 	height: 100px;
 	background-color: #30BB6A;
 }
-.top-header{
+.top-header {
 	width: 100%;
 }
-.flx-justify{
+.flx-justify {
 	display: flex;
 	justify-content: space-around;
 }
-.flx-grid{
+.flx-grid {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
-
-.label{
+.label {
 	position: relative;
 	background-color: #30BB6A;
 	border-radius: 4px;
 	border: 2px solid #333;
-	
 	background-image: url(icons/white.svg);
 	background-repeat: no-repeat;
 	background-size: 75%;
 	background-position: center;
-
-} .label > p{
-	 text-transform: uppercase;
 }
-.front-label{
-margin: 0 14px 28px 14px;
-width: 300px;
-height: 300px;
-
-} .front-label p {
+.label > p {
+	text-transform: uppercase;
+}
+.front-label {
+	margin: 0 14px 28px 14px;
+	width: 400px;
+	height: 400px;
+	display: flex;
+	background-size: 45%;
+	flex-direction: column;
+	justify-content: space-around;
+	
+}
+.front-label p {
 	font-size: 2rem;
 	text-align: center;
-	font-weight:500;
-} .front-label-icon {
+	font-weight: 500;
+}
+.front-label-icon {
 	height: 164px;
 	width: 164px;
 }
 .ui-widget-header {
-   border: 0px;
-   background: none;
+	border: 0px;
+	background: none;
 }
-#profile-tabs{
+#profile-tabs {
 	text-align: left;
 }
-.grid-labels{
+.grid-labels {
 	margin: 12px;
 	text-align: center;
 	height: 200px;
@@ -81,48 +86,54 @@ height: 300px;
 	padding: 24px;
 	display: flex;
 	flex-direction: column;
-	justify-content:center;
-
-} .grid-labels p {
-	font-weight: 800;
-	
+	justify-content: center;
 }
-.redbutton{
-color: white;
-		background-color: #bb3a30;
+.grid-labels p {
+	font-weight: 800;
+}
+.redbutton {
+	color: white;
+	background-color: #bb3a30;
 	border: 1px solid #6e0d06;
-}.redbutton:hover,.redbutton:active{
+}
+.redbutton:hover, .redbutton:active {
 	background-color: #6e0d06;
 	color: white;
 	border: 1px solid #bb3a30;
 }
-.new-post-row{cursor:pointer}
-.new-post-row div{
+.new-post-row {
+	cursor: pointer
+}
+.new-post-row div {
 	border-left: 1px solid black;
 	padding-left: 12px;
-} .new-post-row:hover{
+}
+.new-post-row:hover {
 	background-color: #30BB6A;
 }
-.post-desc div{
+.post-desc div {
 	color: grey;
 }
-.overlay{
-	position:absolute;
+.overlay {
+	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color:rgba(51,51,51,0.64);
+	background-color: rgba(51,51,51,0.64);
 	padding: 12px;
-	
-} .overlay p, .overlay h3{
+}
+.overlay p, .overlay h3 {
 	color: white;
 	font-size: 1rem;
 }
-#receiver .flx-grid{
+#receiver .flx-grid {
 	width: 75%;
 	margin: auto;
 }
-.white-icon{
-
+.white-icon {
+}
+#form-descrtiption, #form-title, #form-adress{
+	height: 48px;
+	padding-left: 12px;
 }

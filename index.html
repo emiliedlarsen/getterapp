@@ -20,7 +20,7 @@
     <div class="col-3-sm">
       <h1>Getter</h1>
     </div>
-    <div class="col-7-sm flx-justify"> <a pageDirect="profile">Profil</a> <a pageDirect="postlist">Opslag</a> <a pageDirect="new-post">Nyt opslag</a> </div>
+    <div class="col-7-sm flx-justify"> <a pageDirect="profile">Profil</a> <a pageDirect="postlist">Opslag</a> <a pageDirect="newpost">Nyt opslag</a> </div>
   </nav>
 </header>
 
@@ -74,8 +74,7 @@
       <div icon="car.svg"></div>
       <p>Transport</p>
       <div class="overlay">
-        <h3>Pakker, mennesker, gods...</h3>
-        <p>blablablabla</p>
+        <p>Pakker, mennesker, gods...</p>
       </div>
     </div>
     <div class="grid-labels label" pageDirect="newpost">
@@ -133,6 +132,13 @@
     </ul>
     <div id="profile-posts"><!--  tab 1  -->
       <h2>Mine Opslag</h2>
+	<div class="row post-desc"><!--  post liste labels  -->
+    <div class="col-2-sm">Overskrift</div>
+    <div class="col-3-sm">Kategori</div>
+    <div class="col-3-sm">Beskrivelse</div>
+    <div class="col-2-sm">Klokkeslet</div>
+    <div class="col-2-sm">Oprettet</div>
+  </div>
       <h2>Mine Bud</h2>
     </div>
     <div id="profile-settings"><!--  tab 2  -->
@@ -174,13 +180,33 @@
     <div class="col-2-sm">
       <p>Titel:</p>
     </div>
-    <input class="col-10-sm" placeholder="Kort overskrift...">
+    <input class="col-10-sm" placeholder="Kort overskrift..." id="form-title">
+  </div>
+	<div class="row">
+    <div class="col-2-sm">
+      <p>Kategori:</p>
+    </div>
+		<div class="col-10-sm">
+		    <select id="form-category" >
+      <option>Indkøb</option>
+      <option>Mad</option>
+      <option>Transport</option>
+      <option>Praktisk</option>
+	  <option>Handyman</option>
+      <option>Udlån</option>
+	  <option>Elektronik</option>
+	<option>Krop/Pleje</option>
+	<option>Andet</option>
+    </select>
+		</div>
+
+
   </div>
   <div class="row">
     <div class="col-2-sm">
       <p>Beskrivelse:</p>
     </div>
-    <input class="col-7-sm" placeholder="Beskrivelse af hvad du gerne vil have leveret eller lavet...">
+    <input class="col-7-sm" placeholder="Beskrivelse af hvad du gerne vil have leveret eller lavet..." id="form-descrtiption">
     <div class="col-2-sm">
       <p>Billede</p>
     </div>
@@ -200,16 +226,16 @@
     <div class="col-2-sm">
       <p>Adresse:</p>
     </div>
-    <input class="col-10-sm" placeholder="vejnavn, postnummer, osv.">
+    <input class="col-10-sm" placeholder="Vejnavn, Postnummer, osv." id="form-adress">
   </div>
   <div class="row flx-justify">
     <div class="col-4">
-      <button class="redbutton" pageDirect="postlist">Slå op</button>
+      <button class="redbutton" pageDirect="postlist" id="submitnewpost">Slå op</button>
     </div>
   </div>
 </div>
 
-<!--  NYT OPSLAG  --> 
+<!--  OPSLAG  --> 
 <!--  opslag bliver genereet med jquery funkiton: createListEl(t,c,d,ti)
 se script.js for mere-->
 <div id="postlist" class="container page">
