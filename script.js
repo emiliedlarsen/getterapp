@@ -38,7 +38,7 @@ $(document).ready(function () {
 	$("input[type='checkbox']").checkboxradio();
 	var newTime = $("#new-time").spinner({
 		min: 0,
-		max: 24
+		max: 23
 	}).spinner("value", 12);
 	$("#check-time").on("click", function () {
 		if (newTime.spinner("option", "disabled")) {
@@ -49,7 +49,6 @@ $(document).ready(function () {
 	});
 	
 	$("#form-category").selectmenu();
-
 
 	$(".label").hover( //hover over label
 		function () {
@@ -72,7 +71,13 @@ $(document).ready(function () {
 		var date = new Date(); // ny dato
 		var h = date.getDate(); // få dato
 		var m = date.getMonth(); // måned
-		createListEl(t, c, a, ti, h + "/" + m); // der sinsættes en psot med createListEL()
+		createListEl(t, c, a, ti, h + "/" + m); // der indsættes en post med createListEL()
+		$('#form-title').val(""); // formular ryddes efter opslag er udført
+		$('#form-category').val("");
+		$('#form-adress').val("");
+		$('#new-time').val("");
+		$('#form-descrtiption').val("");
+		
 	}
 	$("#submitnewpost").click(function () {
 		submitPost();

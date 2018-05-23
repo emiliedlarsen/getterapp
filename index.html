@@ -19,7 +19,7 @@
       <div pageDirect="frontpage" icon="getter-logo.png" class="getter-logo"></div>
     </div>
     <div class="col-2-sm">
-      <h1 pageDirect="frontpage" >Getter</h1>
+      <h1 pageDirect="frontpage" class="title" >Getter</h1>
     </div>
     <div class="col-8-sm navigation"> <a pageDirect="profile">Profil</a> <a pageDirect="postlist">Opslag til gettere</a> <a pageDirect="newpost">Nyt opslag</a> </div>
   </nav>
@@ -29,7 +29,7 @@
 
 <!--  FORSIDE  -->
 <div id="frontpage" class="container page">
-  <div class="flx-justify flx-grid">
+  <div class="flx-justify flx-grid front-label-container">
     <div pageDirect="receiver" class="label front-label">
       <p>Modtager</p>
       <div icon="receiver.svg" class="front-label-icon"></div>
@@ -59,63 +59,63 @@
 <div id="receiver" class="container page">
   <h2>Vælg en kategori</h2>
   <div class="flx-grid">
-    <div class="grid-labels label" pageDirect="newpost">
+    <div class="grid-labels label" pageDirect="newpost" categ="shop">
       <div icon="basket.svg"></div>
       <p>Indkøb</p>
       <div class="overlay">
         <p>Supermarked, kiosk, blomster...</p>
       </div>
     </div>
-    <div class="grid-labels label" pageDirect="newpost">
+    <div class="grid-labels label" pageDirect="newpost" categ="food">
       <div icon="food.svg"></div>
       <p>Mad</p>
       <div class="overlay">
         <p>Fastfood, hjemmelavet, snacks...</p>
       </div>
     </div>
-    <div class="grid-labels label" pageDirect="newpost">
+    <div class="grid-labels label" pageDirect="newpost" categ="trans">
       <div icon="car.svg"></div>
       <p>Transport</p>
       <div class="overlay">
         <p>Pakker, mennesker, gods...</p>
       </div>
     </div>
-    <div class="grid-labels label" pageDirect="newpost">
+    <div class="grid-labels label" pageDirect="newpost" categ="prac">
       <div icon="human.svg"></div>
       <p>Praktisk</p>
       <div class="overlay">
         <p>Rengøring, flyttemand, havearbejde...</p>
       </div>
     </div>
-    <div class="grid-labels label" pageDirect="newpost">
+    <div class="grid-labels label" pageDirect="newpost" categ="hand">
       <div icon="handyman.svg"></div>
       <p>Handyman</p>
       <div class="overlay">
         <p>VVS, maler, tømrer, elektriker...</p>
       </div>
     </div>
-    <div class="grid-labels label" pageDirect="newpost">
+    <div class="grid-labels label" pageDirect="newpost" categ="borr">
       <div icon="borrow.svg"></div>
       <p>Udlån</p>
       <div class="overlay">
         <p>Værktøj, maskiner, tøj, udstyr...</p>
       </div>
     </div>
-    <div class="grid-labels label" pageDirect="newpost">
+    <div class="grid-labels label" pageDirect="newpost" categ="elek">
       <div icon="com.svg"></div>
       <p>Elektronik</p>
       <div class="overlay">
         <p>IT-support, TV, reperation...</p>
       </div>
     </div>
-    <div class="grid-labels label" pageDirect="newpost">
+    <div class="grid-labels label" pageDirect="newpost" categ="body">
       <div icon="style.svg"></div>
       <p>Krop/pleje</p>
       <div class="overlay">
         <p>Frisør, massage, stylist...</p>
       </div>
     </div>
-    <div class="grid-labels label" pageDirect="newpost">
+    <div class="grid-labels label" pageDirect="newpost" categ="misc">
       <div icon="misc.svg"></div>
       <p>Andet</p>
       <div class="overlay">
@@ -198,8 +198,8 @@
 	  <option>Handyman</option>
       <option>Udlån</option>
 	  <option>Elektronik</option>
-	<option>Krop/Pleje</option>
-	<option>Andet</option>
+	  <option>Krop/Pleje</option>
+	  <option>Andet</option>
     </select>
 		</div>
 
