@@ -13,18 +13,17 @@
 
 <!--  HEADER  -->
 <header>
-<div class="container">
-	 <nav class="row">
-    <div class="col-2-sm">
-      <div pageDirect="frontpage" icon="getter-logo.png" class="getter-logo"></div>
-    </div>
-    <div class="col-2-sm">
-      <h1 pageDirect="frontpage" class="title" >Getter</h1>
-    </div>
-    <div class="col-8-sm navigation"> <a pageDirect="profile">Profil</a> <a pageDirect="postlist">Opslag til gettere</a> <a pageDirect="newpost">Nyt opslag</a> </div>
-  </nav>
-</div>
- 
+  <div class="container">
+    <nav class="row">
+      <div class="col-2-sm">
+        <div pageDirect="frontpage" icon="getter-logo.png" class="getter-logo"></div>
+      </div>
+      <div class="col-2-sm">
+        <h1 pageDirect="frontpage" class="title" >Getter</h1>
+      </div>
+      <div class="col-8-sm navigation"> <a pageDirect="profile">Profil</a> <a pageDirect="postlist">Opslag til gettere</a> <a pageDirect="newpost">Nyt opslag</a> </div>
+    </nav>
+  </div>
 </header>
 
 <!--  FORSIDE  -->
@@ -39,7 +38,7 @@
         <p>Som modtager kan du slå opslag op med det du går og mangler en hjælpende hånd til eller den ting du gerne vil have leveret til din dør...</p>
       </div>
     </div>
-    <div pageDirect="getter" class="label front-label">
+    <div pageDirect="postlist" class="label front-label">
       <p>Getter</p>
       <div icon="getter.svg" class="front-label-icon"></div>
       <p>Jeg kan hjælpe...</p>
@@ -51,7 +50,7 @@
   </div>
 </div>
 
-<!--  GETTER SIDE  -->
+<!--  GETTER SIDE (ikke i brug?) -->
 <div id="getter" class="container page"> ---Getterpage---<br>
   <a pageDirect="frontpage">To frontpage</a></div>
 
@@ -135,13 +134,13 @@
     </ul>
     <div id="profile-posts"><!--  tab 1  -->
       <h2>Mine Opslag</h2>
-	<div class="row post-desc"><!--  post liste labels  -->
-    <div class="col-2-sm">Overskrift</div>
-    <div class="col-3-sm">Kategori</div>
-    <div class="col-3-sm">Beskrivelse</div>
-    <div class="col-2-sm">Klokkeslet</div>
-    <div class="col-2-sm">Oprettet</div>
-  </div>
+      <div class="row post-desc"><!--  post liste labels  -->
+        <div class="col-2-sm">Overskrift</div>
+        <div class="col-3-sm">Kategori</div>
+        <div class="col-3-sm">Beskrivelse</div>
+        <div class="col-2-sm">Klokkeslet</div>
+        <div class="col-2-sm">Oprettet</div>
+      </div>
       <h2>Mine Bud</h2>
     </div>
     <div id="profile-settings"><!--  tab 2  -->
@@ -185,31 +184,29 @@
     </div>
     <input class="col-10-sm" placeholder="Kort overskrift..." id="form-title">
   </div>
-	<div class="row">
+  <div class="row">
     <div class="col-2-sm">
       <p>Kategori:</p>
     </div>
-		<div class="col-10-sm">
-		    <select id="form-category" >
-      <option>Indkøb</option>
-      <option>Mad</option>
-      <option>Transport</option>
-      <option>Praktisk</option>
-	  <option>Handyman</option>
-      <option>Udlån</option>
-	  <option>Elektronik</option>
-	  <option>Krop/Pleje</option>
-	  <option>Andet</option>
-    </select>
-		</div>
-
-
+    <div class="col-10-sm">
+      <select id="form-category" >
+        <option>Indkøb</option>
+        <option>Mad</option>
+        <option>Transport</option>
+        <option>Praktisk</option>
+        <option>Handyman</option>
+        <option>Udlån</option>
+        <option>Elektronik</option>
+        <option>Krop/Pleje</option>
+        <option>Andet</option>
+      </select>
+    </div>
   </div>
   <div class="row">
     <div class="col-2-sm">
       <p>Beskrivelse:</p>
     </div>
-    <input class="col-7-sm" placeholder="Beskrivelse af hvad du gerne vil have leveret eller lavet..." id="form-descrtiption">
+    <input class="col-7-sm" placeholder="Beskrivelse af hvad du gerne vil have leveret eller lavet..." id="form-description">
     <div class="col-2-sm">
       <p>Billede</p>
     </div>
@@ -238,6 +235,25 @@
   </div>
 </div>
 
+<!--OPSLAG SET SOM GETTER-->
+<div id="getterview" class="container page">
+  <h2 id="post-title"></h2>
+  <div id="post-date"><p>Oprettet d.<span class="post-insert"></span></p></div>
+  <div class="row">
+    <div class="col-6-sm post-item" id="post-description"><p><span class="faded">Beskrivelse:</span> <span class="post-insert"></span></p></div>
+  </div>
+  <div class="row">
+    <div class="col-6-sm post-item" id="post-adress"><p><span class="faded">Adresse:</span> <span class="post-insert"></span></p> </div>
+  </div>
+	<div class="row">
+		<div class="col-6-sm post-item" id="post-time"><p><span class="faded">Tid:</span> <span class="post-insert"></span></p></div>
+
+	</div>
+  <div class="row">
+    <div class="col-6-sm post-item" id="post-category"><p><span class="faded">Category:</span> <span class="post-insert"></span></p></div>
+  </div>
+</div>
+
 <!--  OPSLAG  --> 
 <!--  opslag bliver genereet med jquery funkiton: createListEl(t,c,d,ti)
 se script.js for mere-->
@@ -246,7 +262,7 @@ se script.js for mere-->
   <div class="row post-desc"><!--  post liste labels  -->
     <div class="col-2-sm">Overskrift</div>
     <div class="col-3-sm">Kategori</div>
-    <div class="col-3-sm">Beskrivelse</div>
+    <div class="col-3-sm">Adresse</div>
     <div class="col-2-sm">Klokkeslet</div>
     <div class="col-2-sm">Oprettet</div>
   </div>

@@ -6,9 +6,15 @@
 	outline: none;
 	font-family: 'Mako', sans-serif;
 }
-
+.hide{
+	visibility: hidden;
+}
 p {
 	color: #344648;
+}
+.faded{
+	color: grey;
+
 }
 .title{
 	color: white;
@@ -175,7 +181,13 @@ header div nav {
 }
 .white-icon {
 }
-#form-descrtiption, #form-title, #form-adress{
+#form-description, #form-title, #form-adress{
 	height: 48px;
 	padding-left: 12px;
+}
+.post-item{
+	border-bottom: 1px solid #344648;
+}
+#getterview div row p {
+	color: dimgrey;
 }
