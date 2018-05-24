@@ -20,8 +20,8 @@ $(document).ready(function () {
 	function createListEl(t, c, a, ti, date, d) {
 		$("#postlist .post-desc, #profile-posts .post-desc").after("<div pageDirect='getterview' class='row new-post-row pagelink'><div class='col-2-sm list-el-title'>" + t + "</div><div class='col-3-sm list-el-category'>" + c + "</div><div class='col-3-sm list-el-adress'>" + a + "</div><div class='col-2-sm list-el-time'>" + ti + "</div><div class='col-2-sm list-el-date'>" + date + "</div><div class='list-el-description hide'>" + d + "</div></div></div>");
 	}
-	createListEl("Tømrer", "handyman", "gadenavn 24", "12:00", "29/4");
-	createListEl("Rødvin", "Mad og drikke", "vejnavn 48", "21:00", "17/5");
+	createListEl("Tømrer", "handyman", "gadenavn 24", "12:00", "29/4","Jeg leder efter en tømrer som kan fikse min terrasse.");
+	createListEl("Rødvin", "Mad og drikke", "vejnavn 48", "21:00", "17/5","jeg skal bruge en god rødvin her iaften, max 300kr.");
 
 	//gå til opslag
 	//insætter rigtige variabler i opslag
@@ -41,7 +41,15 @@ $(document).ready(function () {
 		$("#post-description p .post-insert").text(d);
 	});
 	
+	// send besked
+	$(document).on( "click","#sendmessage", function () {
+		var amount = $("#getterview").find(".getter-ms-cash").val();
+		var message = $("#getterview").find(".getter-ms-message").val();
+		var topic = $("#getterview").find(".getter-ms-topic").val();
 
+		$("#profile-messages").after("<div class='row'><div class='col-3-sm'>" + topic + "</div><div class='col-6-sm'>" + message + "</div><div class='col-3-sm'>" + amount + "</div></div></div>");
+		$('.getter-ms-cash,.getter-ms-message,.getter-ms-topic').val("");
+	});
 
 	$("[icon]").addClass("icon"); // klassen "icon" tilføjes til elementer med attr "icon"
 	$("[icon]").each(function () {

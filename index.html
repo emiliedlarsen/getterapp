@@ -134,14 +134,19 @@
     </ul>
     <div id="profile-posts"><!--  tab 1  -->
       <h2>Mine Opslag</h2>
-      <div class="row post-desc"><!--  post liste labels  -->
+      <div class="row post-desc faded"><!--  post liste labels  -->
         <div class="col-2-sm">Overskrift</div>
         <div class="col-3-sm">Kategori</div>
         <div class="col-3-sm">Beskrivelse</div>
         <div class="col-2-sm">Klokkeslet</div>
         <div class="col-2-sm">Oprettet</div>
       </div>
-      <h2>Mine Bud</h2>
+      <h2 >Mine Bud</h2>
+		<div class="row faded" id="profile-messages"><!--  besked list labels  -->
+        <div class="col-3-sm">Emne</div>
+        <div class="col-6-sm">Besked</div>
+        <div class="col-3-sm">Beløb</div>
+      </div>
     </div>
     <div id="profile-settings"><!--  tab 2  -->
       <div class="row">
@@ -206,7 +211,7 @@
     <div class="col-2-sm">
       <p>Beskrivelse:</p>
     </div>
-    <input class="col-7-sm" placeholder="Beskrivelse af hvad du gerne vil have leveret eller lavet..." id="form-description">
+    <textarea class="col-7-sm" placeholder="Beskrivelse af hvad du gerne vil have leveret eller lavet..." id="form-description"></textarea>
     <div class="col-2-sm">
       <p>Billede</p>
     </div>
@@ -239,19 +244,45 @@
 <div id="getterview" class="container page">
   <h2 id="post-title"></h2>
   <div id="post-date"><p>Oprettet d.<span class="post-insert"></span></p></div>
-  <div class="row">
-    <div class="col-6-sm post-item" id="post-description"><p><span class="faded">Beskrivelse:</span> <span class="post-insert"></span></p></div>
+  <div class="row post-item">
+	  <div class="col-2-sm"><p class="faded">Beskrivelse:</p></div>
+    <div class="col-10-sm" id="post-description"><p class="wordwrap"><span class="post-insert"></span></p></div>
   </div>
-  <div class="row">
-    <div class="col-6-sm post-item" id="post-adress"><p><span class="faded">Adresse:</span> <span class="post-insert"></span></p> </div>
+  <div class="row post-item">
+	  <div class="col-2-sm"><p class="faded">Adresse:</p></div>
+    <div class="col-10-sm" id="post-adress"><p><span class="post-insert"></span></p> </div>
   </div>
-	<div class="row">
-		<div class="col-6-sm post-item" id="post-time"><p><span class="faded">Tid:</span> <span class="post-insert"></span></p></div>
+	<div class="row post-item">
+		<div class="col-2-sm"><p class="faded">Tid:</p></div>
+		<div class="col-10-sm" id="post-time"><p><span class="post-insert"></span></p></div>
 
 	</div>
-  <div class="row">
-    <div class="col-6-sm post-item" id="post-category"><p><span class="faded">Category:</span> <span class="post-insert"></span></p></div>
+  <div class="row post-item">
+	  <div class="col-2-sm"><p class="faded">Category:</p></div>
+    <div class="col-10-sm" id="post-category"><p><span class="post-insert"></span></p></div>
   </div>
+	<br>
+	<h4>Send besked</h4>
+	<div class="row">
+		<div class="col-1-sm">Emne:</div>
+		<input class="col-6-sm getter-ms-topic" placeholder="Overskrift på din besked">
+	</div>
+	<div class="row">
+		<div class="col-1-sm">Besked:</div>
+		<textarea class="col-6-sm getter-ms-message" placeholder="Skriv hvad du kan gøre for vedkomne eller hvordan du har tænkt dig at løse opgaven. Tid, sted osv."></textarea>
+	</div>
+		<div class="row">
+		<div class="col-1-sm">Beløb:</div>
+		<input class="col-2-sm getter-ms-cash" placeholder="Hvor meget?">
+		
+	</div>
+
+	<div class="row">
+		<div class="col-4">
+			<button id="sendmessage" class="redbutton col-2" pageDirect="postlist">Send Besked</button>
+		</div>
+		
+	</div>
 </div>
 
 <!--  OPSLAG  --> 
