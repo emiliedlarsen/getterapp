@@ -13,6 +13,15 @@
 p {
 	color: #344648;
 }
+
+/*scrollbar farver og bredde*/
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: #344648; 
+}
+
 .faded{
 	color: grey;
 
@@ -30,9 +39,11 @@ p {
 .getter-logo {
 	height: 75px;
 	width: 75px;
+	margin: 0px;
 }
 .page {
 	margin-top: 28px;
+	padding: 0 12px 0 12px;
 }
 header {
 	width: 100%;
@@ -106,7 +117,7 @@ header div nav {
 	font-weight: 500;
 }
 .front-label-container{
-	margin-top: 15%;
+	margin-top: 15vh;
 }
 .front-label-icon {
 	height: 164px;
@@ -204,3 +215,10 @@ header div nav {
 	border-bottom: 1px solid #A8A8A8;
 }
 
+
+@media (max-height: 800px){
+			#receiver .flx-grid {
+	width: 100%;
+	
+}
+}
