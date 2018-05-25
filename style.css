@@ -6,6 +6,9 @@
 	outline: none;
 	font-family: 'Mako', sans-serif;
 }
+a{
+	text-decoration: none;
+}
 .hide{
 	visibility: hidden;
 	position: fixed;
