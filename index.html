@@ -142,37 +142,37 @@
         <div class="col-2-sm">Oprettet</div>
       </div>
       <h2 >Mine Bud</h2>
-		<div class="row faded" id="profile-messages"><!--  besked list labels  -->
-        <div class="col-3-sm">Emne</div>
-        <div class="col-6-sm">Besked</div>
-        <div class="col-3-sm">Beløb</div>
+		<div class="row" id="profile-messages"><!--  besked list labels  -->
+        <div class="col-3-sm faded">Emne</div>
+        <div class="col-6-sm faded">Besked</div>
+        <div class="col-3-sm faded">Beløb</div>
       </div>
     </div>
     <div id="profile-settings"><!--  tab 2  -->
       <div class="row">
         <div class="col-2-sm">
-          <p>Navn:</p>
+          <p class="faded">Navn:</p>
         </div>
         <input class="col-10-sm" placeholder="Fornavn/Efternavn...">
       </div>
       <div class="row">
         <div class="col-2-sm">
-          <p>Beskrivelse:</p>
+          <p class="faded">Beskrivelse:</p>
         </div>
-        <input class="col-7-sm" placeholder="Beskriv hvem du er og hvad du kan...">
+		  <textarea class="col-8-sm beskr" placeholder="Beskriv hvem du er og hvad du kan..."></textarea>
         <div class="col-2-sm">
-          <p>Billede</p>
+          <div class="picture">(Tilføj profil billede)</div>
         </div>
       </div>
       <div class="row">
         <div class="col-2-sm">
-          <p>Mail:</p>
+          <p class="faded">Mail:</p>
         </div>
-        <input class="col-10-sm" placeholder="adresse@mail.com">
+        <input class="col-10-sm" placeholder="postboks@mail.com">
       </div>
       <div class="row">
         <div class="col-2-sm">
-          <p>Telefon:</p>
+          <p class="faded">Telefon:</p>
         </div>
         <input class="col-10-sm" placeholder="+45 XXXXXXXX">
       </div>
@@ -211,9 +211,9 @@
     <div class="col-2-sm">
       <p>Beskrivelse:</p>
     </div>
-    <textarea class="col-7-sm" placeholder="Beskrivelse af hvad du gerne vil have leveret eller lavet..." id="form-description"></textarea>
+    <textarea class="col-8-sm" placeholder="Beskrivelse af hvad du gerne vil have leveret eller lavet..." id="form-description"></textarea>
     <div class="col-2-sm">
-      <p>Billede</p>
+      <div class="picture">(Tilføj billede)</div>
     </div>
   </div>
   <div class="row">
@@ -307,5 +307,6 @@ se script.js for mere-->
   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
   crossorigin="anonymous"></script> 
 <script src="script.js"></script>
+	
 </body>
 </html>

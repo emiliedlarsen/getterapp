@@ -73,6 +73,7 @@ $(document).ready(function () {
 		}
 	});
 	
+	
 	$("#form-category").selectmenu();
 
 	$(".label").hover( //hover over label
